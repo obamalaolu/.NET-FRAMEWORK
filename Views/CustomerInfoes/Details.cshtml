@@ -1,0 +1,83 @@
+﻿@model ProjectTise.Models.CustomerInfo
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CustomerInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer_First_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer_First_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer_Last_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer_Last_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer_D_O_B)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer_D_O_B)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address_Name_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address_Name_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address_Line_2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address_Line_2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Town_City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Town_City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Postcode_Zip_Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Postcode_Zip_Code)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

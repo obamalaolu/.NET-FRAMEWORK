@@ -1,0 +1,76 @@
+﻿@model IEnumerable<ProjectTise.Models.CustomerInfo>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer_First_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer_Last_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer_D_O_B)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer_Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address_Name_No)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address_Line_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Town_City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Postcode_Zip_Code)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer_First_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer_Last_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer_D_O_B)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer_Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address_Name_No)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address_Line_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Town_City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Postcode_Zip_Code)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CustomerId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CustomerId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CustomerId })
+        </td>
+    </tr>
+}
+
+</table>
